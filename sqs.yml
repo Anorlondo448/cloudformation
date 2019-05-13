@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  TestSQS:
+    Type: AWS::SQS::Queue
+    Properties:
+      # ContentBasedDeduplication : false
+      DelaySeconds: 0
+      # FifoQueue : true
+      # KmsMasterKeyId: String
+      # KmsDataKeyReusePeriodSeconds: Integer
+      MaximumMessageSize: 262144
+      MessageRetentionPeriod: 345600
+      QueueName: sample_standard_queue_from_cfn
+      ReceiveMessageWaitTimeSeconds: 0
+      # RedrivePolicy: RedrivePolicy
+      # Tags : [ Resource Tag, ... ]
+      VisibilityTimeout: 600
